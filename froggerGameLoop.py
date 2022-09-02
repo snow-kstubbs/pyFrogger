@@ -1,6 +1,7 @@
 import pygame
 import frog
 import car
+import time
 def drawScreen():
     screen.fill("blue")
     screen.blit(winBlock,(0,0))
@@ -36,7 +37,18 @@ def drawLooseScreen():
     pygame.display.flip()
 
 def didCollide(obj1, obj2):
-    pass
+    xranges1 = obj1.getxpos()
+    xrangee1 = xranges1+obj1.width
+    y1 = obj1.getypos()
+    xranges2 = obj2.getxpos()
+    xrangee2 = xranges2+obj2.width
+    y2 = obj2.getypos()
+
+
+    if xranges2>= xranges1 and xrangee2<=xrangee1 and y2== y1:
+        return True
+    else:
+        return False
 
 play = True
 screenx = 640
@@ -53,6 +65,7 @@ screen.fill("blue")
 gfrog = frog.frog()
 gcar0 = car.car()
 gcar0.changeypos(160)
+gcar0.changexpos(500)
 gcar1 = car.car()
 gcar1.changeypos(192)
 gcar2 = car.car()
@@ -78,6 +91,7 @@ while play:
         if didCollide(car,gfrog):
             play = False
             drawLooseScreen()
+            time.sleep(5)
     for event in pygame.event.get():
         if event.type == pygame.QUIT:  
            play = False

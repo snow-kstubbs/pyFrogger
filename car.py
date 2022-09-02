@@ -1,13 +1,14 @@
 import pygame
-
+import random
 
 class car:
     def __init__(self):
         self.direction = -1
         self.idleImage =  pygame.image.load("images\CarRed.gif")
-        self.xpos = 400
+        self.xpos = 400+ random.randint(0,250)
         self.ypos = 0
-        self.size = 2
+        self.width = 64
+        self.height = 32
         self.type = "car"
         self.image = self.idleImage
         self.carRect = self.image.get_rect()
@@ -29,6 +30,6 @@ class car:
 
     def changePos(self,deltax, deltay):
         if(self.xpos <=-32):
-            self.xpos = 640
+            self.xpos = 640+ random.randint(1,285)
         else:
             self.xpos = self.xpos+deltax*self.direction
