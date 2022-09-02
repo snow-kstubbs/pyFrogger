@@ -4,7 +4,7 @@ import os
 class frog:
 
     def __init__(self):
-        self.idleImage =  pygame.image.load("images\Frog.gif")
+        self.idleImage =  pygame.image.load("pyFrogger\images\Frog.gif")
         self.xpos = 304
         self.ypos = 608
         self.state = 'alive'

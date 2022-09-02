@@ -56,9 +56,9 @@ screeny = 640
 pygame.init()
 pygame.display.set_caption('PyFrog')
 screen = pygame.display.set_mode((screenx, screeny))
-street = pygame.image.load("images\street.gif")
-grass = pygame.image.load("images\grass.gif")
-winBlock = pygame.image.load("images\WinBlock.gif")
+street = pygame.image.load("pyFrogger\images\street.gif")
+grass = pygame.image.load("pyFrogger\images\grass.gif")
+winBlock = pygame.image.load("pyFrogger\images\WinBlock.gif")
 
 
 screen.fill("blue")

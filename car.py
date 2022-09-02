@@ -4,7 +4,7 @@ import random
 class car:
     def __init__(self):
         self.direction = -1
-        self.idleImage =  pygame.image.load("images\CarRed.gif")
+        self.idleImage =  pygame.image.load("pyFrogger\images\CarRed.gif")
         self.xpos = 400+ random.randint(0,250)
         self.ypos = 0
         self.width = 64
