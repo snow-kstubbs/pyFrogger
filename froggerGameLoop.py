@@ -5,6 +5,7 @@ import time
 def drawScreen():
     screen.fill("blue")
     screen.blit(winBlock,(0,0))
+    screen.blit(startBlock,(0,608))
     screen.blit(grass, (0,64))
     screen.blit(grass, (0,96))
     screen.blit(grass, (0,128))
@@ -59,7 +60,7 @@ screen = pygame.display.set_mode((screenx, screeny))
 street = pygame.image.load("pyFrogger\images\street.gif")
 grass = pygame.image.load("pyFrogger\images\grass.gif")
 winBlock = pygame.image.load("pyFrogger\images\WinBlock.gif")
-
+startBlock = pygame.image.load("pyFrogger\images\startBlock.gif")
 
 screen.fill("blue")
 gfrog = frog.frog()
@@ -81,6 +82,7 @@ while play:
     if gfrog.getypos() == 0:
         play = False
         drawWinScreen()
+        time.sleep(5)
 
     if loopNum== 30:
         for car in cars:
