@@ -4,13 +4,14 @@ import os
 class frog:
 
     def __init__(self):
-        self.idleImage =  pygame.image.load("pyFrogger\images\Frog.gif")
+        self.idleImage =  pygame.image.load("images\Frog.gif")
+        self.deathImage = pygame.image.load("images\FrogDeath.gif")
         self.xpos = 304
         self.ypos = 608
         self.state = 'alive'
         self.imageState = "idle"
-        self.width = 32
-        self.height = 32
+        self.width = 30
+        self.height = 30
         self.type = "frog"
         self.image = self.idleImage
         self.frogRect = self.image.get_rect()

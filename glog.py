@@ -1,17 +1,18 @@
 import pygame
 import random
 
-class car:
+class log:
     def __init__(self):
         self.direction = -1
-        self.idleImage =  pygame.image.load("images\CarRed.gif")
+        self.idleImage =  pygame.image.load("images\Log.gif")
         self.xpos = 400+ random.randint(0,250)
         self.ypos = 0
-        self.width = 63
-        self.height = 31
-        self.type = "car"
+        self.width = 64
+        self.height = 32
+        self.type = "Log"
         self.image = self.idleImage
         self.carRect = self.image.get_rect()
+        self.speed = 1
 
     def changexpos(self, delta):
         self.xpos = self.xpos+delta
